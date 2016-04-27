@@ -33,7 +33,10 @@ let call = function(method, params) {
 
 let catchAll = (err) => {
   if (err.data) {
-    console.error("Error:", err.data.error.message)
+    if (err.data.error)
+      console.error("Error:", err.data.error.message)
+    else
+      console.error("Internal error:", err.data)
     return Promise.reject(null)
   }
   if (err) {
