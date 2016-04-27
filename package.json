@@ -1,6 +1,6 @@
 {
   "name": "bitcoin-client",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Smallest promise-based, raw Bitcoin Core RPC client",
   "main": "bitcoin-client.js",
   "scripts": {
