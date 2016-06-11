@@ -41,9 +41,9 @@ let catchAll = (err) => {
   }
   if (err) {
     let stack = null
-    if (stack)
-      stack = err.stack
-    console.error("Error:", err, stack)
+    if (err.stack)
+      err = err.stack
+    console.error("Error:", err)
     err = null
   }
   return Promise.reject(err)
